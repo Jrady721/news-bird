@@ -1,6 +1,6 @@
 RewriteEngine On
 RewriteBase /
-RewriteRule ^ routes.php [QSA,L]
+RewriteRule ^$ public/index.php [QSA,L]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ routes.php [QSA,L]
+RewriteRule ^(.*)$ public/index.php [QSA,L]

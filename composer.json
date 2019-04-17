@@ -1,3 +1,25 @@
 {
-
+  "name": "jrady/news-bird",
+  "description": "2017 Narsha Project",
+  "authors": [
+    {
+      "name": "Jrady",
+      "email": "jrady721@gmail.com",
+      "homepage": "http://jrady721.cafe24.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "app/helpers.php"
+    ],
+    "psr-4": {
+      "NewsBird\\": "app/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  }
 }
