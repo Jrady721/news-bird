@@ -9,5 +9,8 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="<?= asset('css/app.css'); ?>">
+
+    <!-- scripts -->
+    <script src="<?= asset('js/jquery-3.4.0.js'); ?>" defer></script>
 </head>
 <body>

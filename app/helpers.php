@@ -1,5 +1,18 @@
 <?php
 
+
+
+use Dotenv\Dotenv;
+use NewsBird\Database\Database;
+
+$dotenv = Dotenv::create(__DIR__. '/..');
+$dotenv->load();
+
+$db = new Database();
+$db = $db->getDB();
+//$users = $db->query("select * from users")->fetchAll();
+//var_dump($users);
+
 // get asset
 if (!function_exists('asset')) {
     /**

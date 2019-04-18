@@ -23,7 +23,6 @@
 //    require_once VIEWS_DIR . '/layouts/app.php';
 //}
 
-
 use NewsBird\Request\Request;
 use NewsBird\Router\Router;
 
@@ -41,9 +40,8 @@ $router->get('/', function () {
 
 
 $router->get('/404', function () {
-    return view(__DIR__ . '/../resources/views/404.php', ['name' => '중무']);
+    return view(__DIR__ . '/../resources/views/404.php', ['name' => 'Jrady']);
 //    $response = view(__DIR__ . '/../resources/views/404.php');
-//
 //    $expected = '<h1>404 NOT FOUND</h1>';
 //    assert($response === $expected, 'Load a template using view');
 });

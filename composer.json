@@ -21,5 +21,9 @@
     "psr-4": {
       "Tests\\": "tests/"
     }
+  },
+  "require": {
+    "vlucas/phpdotenv": "^3.3",
+    "ext-pdo": "*"
   }
 }
