@@ -1,7 +1,5 @@
-<?php include_once 'partials/header.php'; ?>
-
 <div class="container">
-    <img src="<?= asset('images/main.png'); ?>" alt="main-image">
+    <div id="main-img" class="img">
+        <img src="<?= asset('images/main.png'); ?>" alt="main-image">
+    </div>
 </div>
-
-<?php include_once 'partials/footer.php'; ?>

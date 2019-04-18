@@ -14,3 +14,16 @@
     <script src="<?= asset('js/jquery-3.4.0.js'); ?>" defer></script>
 </head>
 <body>
+<div id="app">
+    <?php include_once 'partials/header.php'; ?>
+    <main>
+        <?php if (isset($template)): ?>
+            <?php include_once __DIR__ . "/../home.php"; ?>
+        <?php else: ?>
+            <?php include_once "../404.php"; ?>
+        <?php endif; ?>
+    </main>
+    <?php include_once 'partials/footer.php'; ?>
+</div>
+</body>
+</html>

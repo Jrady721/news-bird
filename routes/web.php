@@ -31,27 +31,23 @@ $router = new Router(new Request());
 //echo asset('images/main.png');
 
 $router->get('/', function () {
+    return view('home');
+});
+
+
+//$router->get('/404', function () {
+//    return view(__DIR__ . '/../resources/views/404.php', ['name' => 'Jrady']);
+////    $response = view(__DIR__ . '/../resources/views/404.php');
+////    $expected = '<h1>404 NOT FOUND</h1>';
+////    assert($response === $expected, 'Load a template using view');
+//});
+
+//$router->get('/profile', function ($request) {
 //    return <<<HTML
-//    <h1>Hello world</h1>
+//    <h1>Profile</h1>
 //    HTML;
-    return view(__DIR__ . '/../resources/views/home.php');
+//});
 
-});
-
-
-$router->get('/404', function () {
-    return view(__DIR__ . '/../resources/views/404.php', ['name' => 'Jrady']);
-//    $response = view(__DIR__ . '/../resources/views/404.php');
-//    $expected = '<h1>404 NOT FOUND</h1>';
-//    assert($response === $expected, 'Load a template using view');
-});
-
-$router->get('/profile', function ($request) {
-    return <<<HTML
-    <h1>Profile</h1>
-    HTML;
-});
-
-$router->post('/data', function ($request) {
-    return json_encode($request->getBody());
-});
+//$router->post('/data', function ($request) {
+//    return json_encode($request->getBody());
+//});

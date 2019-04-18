@@ -8,10 +8,12 @@ use NewsBird\Database\Database;
 $dotenv = Dotenv::create(__DIR__. '/..');
 $dotenv->load();
 
+/* getDB */
 $db = new Database();
 $db = $db->getDB();
-//$users = $db->query("select * from users")->fetchAll();
-//var_dump($users);
+
+/* session start */
+session_start();
 
 // get asset
 if (!function_exists('asset')) {
@@ -35,10 +37,12 @@ if (!function_exists('view')) {
      */
     function view($template, $data = [])
     {
-        if (is_file($template)) {
+        $layout = __DIR__ . '/../resources/views/layouts/app.php';
+
+        if (is_file($layout)) {
             ob_start();
             extract($data);
-            include_once $template;
+            include_once $layout;
             return ob_get_clean();
         }
 
