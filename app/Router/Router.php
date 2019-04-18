@@ -30,7 +30,8 @@ class Router
 
     /**
      * Removes trailing forward slashes from the right of the route.
-     * @param route (string)
+     * @param $route
+     * @return string
      */
     private function formatRoute($route)
     {
