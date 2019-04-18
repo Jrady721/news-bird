@@ -10,13 +10,17 @@ class Database
 
     function __construct()
     {
-        $this->config = include __DIR__ .'/../../config/database.php';
+        $this->config = include __DIR__ . '/../../config/database.php';
     }
 
     public function getDB()
     {
 //        return $this->config;
-        $database = new PDO("{$this->config['connection']}:host={$this->config['host']};dbname={$this->config['database']}", $this->config['username'], $this->config['password']);
+        $database = new PDO("{$this->config['connection']}:host={$this->config['host']};dbname={$this->config['database']}", $this->config['username'], $this->config['password'], array(
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
+            PDO::MYSQL_ATTR_INIT_COMMAND => 'set names utf8mb4'
+        ));
         return $database;
     }
 }

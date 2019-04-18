@@ -18,7 +18,7 @@
     <?php include_once 'partials/header.php'; ?>
     <main>
         <?php if (isset($template)): ?>
-            <?php include_once __DIR__ . "/../home.php"; ?>
+            <?php include_once __DIR__ . "/../{$template}.php"; ?>
         <?php else: ?>
             <?php include_once "../404.php"; ?>
         <?php endif; ?>

@@ -1,11 +1,9 @@
 <?php
 
-
-
 use Dotenv\Dotenv;
 use NewsBird\Database\Database;
 
-$dotenv = Dotenv::create(__DIR__. '/..');
+$dotenv = Dotenv::create(__DIR__ . '/..');
 $dotenv->load();
 
 /* getDB */
@@ -23,7 +21,6 @@ if (!function_exists('asset')) {
      */
     function asset($src)
     {
-//        echo $_SERVER['DOCUMENT_ROOT'] . '/public/' . $src;
         return '/public/' . $src;
     }
 }
@@ -47,5 +44,31 @@ if (!function_exists('view')) {
         }
 
         return new Exception("Template not found");
+    }
+}
+
+if (!function_exists('alert')) {
+    /**
+     * @param $msg
+     */
+    function alert($msg)
+    {
+        echo "<script>alert('$msg')</script>";
+    }
+}
+
+if (!function_exists('move')) {
+    /**
+     * @param $url
+     */
+    function move($url)
+    {
+        echo "<script>location.replace('$url')</script>";
+    }
+}
+if (!function_exists('back')) {
+    function back()
+    {
+        echo "<script>history.back()</script>";
     }
 }
