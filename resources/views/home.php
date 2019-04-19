@@ -1,4 +1,4 @@
-<section class="intro">
+<section id="home">
     <h2 class="hidden">INTRO</h2>
     <div class="container">
         <div id="main-img" class="img">

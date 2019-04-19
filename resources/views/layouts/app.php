@@ -20,7 +20,7 @@
         <?php if (isset($template)): ?>
             <?php include_once __DIR__ . "/../{$template}.php"; ?>
         <?php else: ?>
-            <?php include_once "../404.php"; ?>
+            <?php include_once __DIR__ . "/../errors/404.php"; ?>
         <?php endif; ?>
     </main>
     <?php include_once 'partials/footer.php'; ?>

@@ -25,11 +25,11 @@
                 </a>
                 <nav class="nav col">
                     <ul class="row main-menu">
-                        <li class="col"><a href="#">일정</a></li>
-                        <li class="col"><a href="#">시간표</a></li>
-                        <li class="col"><a href="#">급식표</a></li>
-                        <li class="col"><a href="#">동아리</a></li>
-                        <li class="col"><a href="#">설문조사</a></li>
+                        <li class="col"><a href="/calendar">일정</a></li>
+                        <li class="col"><a href="/timetable">시간표</a></li>
+                        <li class="col"><a href="/menu">식단표</a></li>
+                        <li class="col"><a href="/circles">동아리</a></li>
+                        <li class="col"><a href="/poll">설문조사</a></li>
                     </ul>
                 </nav>
             </div>

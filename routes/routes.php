@@ -9,6 +9,26 @@ $router->get('/', function () {
     return view('home');
 });
 
+$router->get('/poll', function () {
+    return view('poll');
+});
+
+$router->get('/menu', function () {
+    return view('menu');
+});
+
+$router->get('/circles', function () {
+    return view('circles');
+});
+
+$router->get('/calendar', function () {
+    return view('calendar');
+});
+
+$router->get('/timetable', function () {
+    return view('timetable');
+});
+
 $router->get('/login', function () {
     if (loginChk()) {
         alert('비회원만 접근 가능합니다.');
