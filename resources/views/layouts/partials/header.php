@@ -3,8 +3,8 @@
         <div class="container">
             <div class="row">
                 <ul class="row">
-                    <li><b>주소</b>: 대구광역시 달성군 구지면 창리로 11길 93</li>
-                    <li><b>교무실</b>: 053)231-9226</li>
+                    <li><i class="fas fa-map-marker-alt"></i> <b>주소</b>: 대구광역시 달성군 구지면 창리로 11길 93</li>
+                    <li><i class="fas fa-phone"></i> <b>교무실</b>: 053)231-9226</li>
                 </ul>
                 <ul class="row">
                     <?php if (loginChk()): ?>
