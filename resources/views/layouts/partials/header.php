@@ -7,7 +7,7 @@
                     <li><b>교무실</b>: 053)231-9226</li>
                 </ul>
                 <ul class="row">
-                    <?php if (isset($_SESSION['id'])): ?>
+                    <?php if (loginChk()): ?>
                         <li><a href="/logout">로그아웃</a></li>
                     <?php else: ?>
                         <li><a href="/login">로그인</a></li>

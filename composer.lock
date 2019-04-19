@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba6d56cece27fb063c165f96be13acf1",
+    "content-hash": "80236581fff2c4b87f9e2daf19be0a21",
     "packages": [
         {
             "name": "phpoption/phpoption",
@@ -173,6 +173,8 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-pdo": "*"
+    },
     "platform-dev": []
 }

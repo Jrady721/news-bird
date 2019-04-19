@@ -1,6 +1,6 @@
 {
   "name": "jrady/news-bird",
-  "description": "2017 Narsha Project",
+  "description": "2017 Project - DGSW Festival",
   "authors": [
     {
       "name": "Jrady",
@@ -11,7 +11,8 @@
   ],
   "autoload": {
     "files": [
-      "app/helpers.php"
+      "app/helpers.php",
+      "routes/routes.php"
     ],
     "psr-4": {
       "NewsBird\\": "app/"
@@ -24,6 +25,7 @@
   },
   "require": {
     "vlucas/phpdotenv": "^3.3",
-    "ext-pdo": "*"
+    "ext-pdo": "*",
+    "ext-mbstring": "*"
   }
 }

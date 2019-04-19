@@ -15,6 +15,10 @@
                     <label class="hidden" for="password"></label>
                     <input type="password" id="password" name="password" placeholder="password">
                 </div>
+                <div class="row">
+                    <label class="hidden" for="confirm-password"></label>
+                    <input type="password" id="confirm-password" name="confirmPassword" placeholder="confirm password">
+                </div>
 
                 <div class="row">
                     <button class="btn" type="submit">회원가입</button>

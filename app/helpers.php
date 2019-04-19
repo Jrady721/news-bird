@@ -3,16 +3,6 @@
 use Dotenv\Dotenv;
 use NewsBird\Database\Database;
 
-$dotenv = Dotenv::create(__DIR__ . '/..');
-$dotenv->load();
-
-/* getDB */
-$db = new Database();
-$db = $db->getDB();
-
-/* session start */
-session_start();
-
 // get asset
 if (!function_exists('asset')) {
     /**
@@ -47,6 +37,7 @@ if (!function_exists('view')) {
     }
 }
 
+// alert
 if (!function_exists('alert')) {
     /**
      * @param $msg
@@ -57,6 +48,7 @@ if (!function_exists('alert')) {
     }
 }
 
+// move
 if (!function_exists('move')) {
     /**
      * @param $url
@@ -66,9 +58,41 @@ if (!function_exists('move')) {
         echo "<script>location.replace('$url')</script>";
     }
 }
+
+// back
 if (!function_exists('back')) {
     function back()
     {
         echo "<script>history.back()</script>";
     }
 }
+
+
+// loginChk
+if (!function_exists('loginChk')) {
+    function loginChk()
+    {
+        return isset($_SESSION['id']);
+    }
+}
+
+if (!function_exists('getDB')) {
+    function getDB()
+    {
+        $db = new Database();
+        return $db->connect();
+    }
+}
+
+if (!function_exists('loadEnv')) {
+    function loadEnv()
+    {
+        $dotenv = Dotenv::create(__DIR__ . '/..');
+        $dotenv->load();
+    }
+}
+
+loadEnv();
+
+/* session start */
+session_start();
