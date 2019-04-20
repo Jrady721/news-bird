@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="<?= asset('/images/bird.png'); ?>">
     <title>NewsBird</title>
 
     <!-- styles -->
@@ -17,6 +18,7 @@
 
     <!-- scripts -->
     <script src="<?= asset('js/jquery-3.4.0.js'); ?>" defer></script>
+    <script src="<?= asset('js/app.js'); ?>" defer></script>
 </head>
 <body>
 <div id="app">

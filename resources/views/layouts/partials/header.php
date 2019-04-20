@@ -10,8 +10,8 @@
                     <?php if (loginChk()): ?>
                         <li><a href="/logout">로그아웃</a></li>
                     <?php else: ?>
-                        <li><a href="/login">로그인</a></li>
-                        <li><a href="/register">회원가입</a></li>
+                        <li><a href="/login" data-name="login" class="link">로그인</a></li>
+                        <li><a href="/register" data-name="register" class="link">회원가입</a></li>
                     <?php endif; ?>
                 </ul>
             </div>
@@ -25,14 +25,25 @@
                 </a>
                 <nav class="nav col">
                     <ul class="row main-menu">
-                        <li class="col"><a href="/calendar">일정</a></li>
-                        <li class="col"><a href="/timetable">시간표</a></li>
-                        <li class="col"><a href="/menu">식단표</a></li>
-                        <li class="col"><a href="/circles">동아리</a></li>
-                        <li class="col"><a href="/poll">설문조사</a></li>
+                        <!--                        <li class="col" data-name="home"><a href="/">홈</a></li>-->
+                        <li class="col"><a href="/calendar" data-name="calendar" class="link">일정</a></li>
+                        <li class="col"><a href="/timetable" data-name="timetable" class="link">시간표</a></li>
+                        <li class="col"><a href="/menu" data-name="menu" class="link">식단표</a></li>
+                        <li class="col"><a href="/circles" data-name="circles" class="link">동아리</a></li>
+                        <li class="col"><a href="/poll" data-name="poll" class="link">설문조사</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </div>
 </header>
+
+<!-- breadcrumb -->
+<?php if ($_SERVER['REQUEST_URI'] !== '/'): ?>
+    <!--    <nav aria-label="breadcrumb">-->
+    <!--        <ol class="breadcrumb">-->
+    <!--            <li class="breadcrumb-item"><a href="#">Home</a></li>-->
+    <!--            <li class="breadcrumb-item active" aria-current="page">Library</li>-->
+    <!--        </ol>-->
+    <!--    </nav>-->
+<?php endif; ?>
