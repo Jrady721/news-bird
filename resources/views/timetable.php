@@ -9,7 +9,7 @@
         foreach ($grades as $i => $grade) {
             foreach ($grade as $j => $class) {
                 echo "<div class='row'>";
-                echo "<br><h1>$i 학년 " . ($j + 1) . " 반";
+                echo "<h1>$i 학년 " . ($j + 1) . " 반";
                 foreach ($class as $key => $yoil) {
 
                     if ($key != "teacher") {

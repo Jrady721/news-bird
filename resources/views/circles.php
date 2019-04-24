@@ -40,13 +40,12 @@
                         // 동아리 명 불러오기
                         if ($char == "[") {
                             echo "<div>";
-                            echo "<br><br><p>$data[$c]</p><br>";
+                            echo "<p>$data[$c]</p><br>";
                         }
 
                         // 동아리 회원 읽기 ~~~
                         if ($chk) {
                             if ($c) {
-
                                 echo $data[$c] . " ";
                                 if ($c == $num - 1) {
                                     echo "<br>";
@@ -54,7 +53,6 @@
                             }
                         }
                     }
-
 
                     $row++;
                 }
