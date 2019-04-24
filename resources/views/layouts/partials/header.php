@@ -21,7 +21,7 @@
         <div class="container">
             <div class="row">
                 <a href="/" class="logo col">
-                    <img src="<?= asset('images/logo.png'); ?>" alt="logo">
+                    <img src="<?= asset('images/logo2.png'); ?>" alt="logo">
                 </a>
                 <nav class="nav col">
                     <ul class="row main-menu">

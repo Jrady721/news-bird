@@ -26,6 +26,7 @@
   "require": {
     "vlucas/phpdotenv": "^3.3",
     "ext-pdo": "*",
-    "ext-mbstring": "*"
+    "ext-mbstring": "*",
+    "ext-json": "*"
   }
 }

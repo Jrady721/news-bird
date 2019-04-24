@@ -28,6 +28,7 @@ section h2 { text-align: center; margin-bottom: 30px; font-weight: normal; font-
 .top ul:nth-child(2) li:not(:last-child) a { border-right: 1px solid #cccccc; padding-right: 20px;}
 
 .main { box-shadow: 1px 1px 5px lightgray; height: 70px; background: rgba(255, 255, 255, .9); }
+/*.logo img { opacity: .9; }*/
 .main .container { padding-top: 10px; }
 .main-menu li a { display: block; text-align: center; font-weight: bold; }
 .main-menu li a:hover { color: #5cd3fd; opacity: 1; }
@@ -62,7 +63,10 @@ form input:focus ~ label { color: #32a5fd; }
 
 form button { margin-top: 20px; }
 
-
 /* 아이디 비밀번호 자동입력 없애기 */
 input:-webkit-autofill { -webkit-box-shadow: 0 0 0 1000px white inset; }
 
+/* school-meal */
+#menu iframe { width: 100%; min-height: 750px; }
+
+#poll *, #circles *, #calendar *, #timetable * { text-align: center; }
