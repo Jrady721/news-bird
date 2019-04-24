@@ -1,9 +1,7 @@
 <section id="calendar">
     <h2>학사일정</h2>
     <div class="container">
-        <!--        <p>내용</p>-->
-
-        <table>
+        <div class="row" style="align-items: flex-start;">
             <?php
             $row = 1;
 
@@ -23,13 +21,17 @@
                         for ($c = 0; $c < $num; $c++) {
                             // 달(MONTH) 일 경우
                             if ($c == 0 && $data[$c] != "") {
+                                if($month != "") {
+                                    echo "</div>";
+                                }
+                                echo "<div>";
                                 $month = $data[$c];
                             }
 
                             // 날짜(DATE) 일경우
                             if ($c == 1 || $c == 4 || $c == 7 || $c == 10 || $c == 13) {
                                 $date = $data[$c];
-                                echo "$month / $date <br>";
+                                echo "$month {$date}일 <br>";
                             }
 
                             // 활동 내역일 경우
@@ -40,9 +42,9 @@
 
                             if ($c == 17) {
                                 if(preg_match('/○/',$data[$c])) {
-                                    echo "<p><mark>기숙사 휴무일: $data[$c]</mark></p>";
+                                    echo "<p style='color: red;'>기숙사 휴무</p><br>";
                                 } else {
-                                    echo "<p><mark>기숙사 개방일: $data[$c]</mark></p>";
+                                    echo "<p style='color: blue;'>기숙사 개방: $data[$c]</p><br>";
                                 }
                             }
                         }
@@ -52,6 +54,6 @@
                 fclose($handle);
             }
             ?>
-        </table>
+        </div>
     </div>
 </section>

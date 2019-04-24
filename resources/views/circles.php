@@ -1,59 +1,66 @@
 <section id="circles">
     <h2>동아리정보</h2>
     <div class="container">
-        <?php
-        $row = 1;
+        <div class="row" style="align-items: flex-start;">
+            <?php
+            $row = 1;
 
-        $chk = false;
-        $flag = false;
+            $chk = false;
+            $flag = false;
 
-        if (($handle = fopen("files/circles.csv", "r")) !== FALSE) {
 
-            while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+            if (($handle = fopen("files/circles.csv", "r")) !== FALSE) {
 
-                $num = count($data);
+                while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 
-                // 만약 동아리명이 나온다면 학년 반 번호는 스킵한다.
-                if ($flag) {
-                    $flag = false;
-                    continue;
-                }
+                    $num = count($data);
 
-                for ($c = 0; $c < $num; $c++) {
-                    $char = substr(trim($data[$c]), 0, 1);
+                    // 만약 동아리명이 나온다면 학년 반 번호는 스킵한다.
+                    if ($flag) {
+                        $flag = false;
+                        continue;
+                    }
 
-                    if ($char == ";") {
-                        $chk = !$chk;
+                    for ($c = 0; $c < $num; $c++) {
+                        $char = substr(trim($data[$c]), 0, 1);
 
-                        if ($chk == true) {
-                            $flag = true;
+                        if ($char == ";") {
+                            $chk = !$chk;
+
+                            if ($chk == true) {
+                                $flag = true;
+                            } else {
+                                echo "</div>";
+                            }
+
+                            // 끝내기
+                            break;
                         }
 
-                        // 끝내기
-                        break;
-                    }
+                        // 동아리 명 불러오기
+                        if ($char == "[") {
+                            echo "<div>";
+                            echo "<br><br><p>$data[$c]</p><br>";
+                        }
 
-                    // 동아리 명 불러오기
-                    if ($char == "[") {
-                        echo "<br><br><p>$data[$c]</p><br>";
-                    }
+                        // 동아리 회원 읽기 ~~~
+                        if ($chk) {
+                            if ($c) {
 
-                    // 동아리 회원 읽기 ~~~
-                    if ($chk) {
-                        if($c) {
-
-                        echo $data[$c]." ";
-                            if($c == $num - 1) {
-                                echo "<br>";
+                                echo $data[$c] . " ";
+                                if ($c == $num - 1) {
+                                    echo "<br>";
+                                }
                             }
                         }
                     }
-                }
 
-                $row++;
+
+                    $row++;
+                }
+                fclose($handle);
             }
-            fclose($handle);
-        }
-        ?>
+            ?>
+        </div>
     </div>
 </section>

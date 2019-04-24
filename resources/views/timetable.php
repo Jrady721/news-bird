@@ -8,9 +8,12 @@
 
         foreach ($grades as $i => $grade) {
             foreach ($grade as $j => $class) {
+                echo "<div class='row'>";
                 echo "<br><h1>$i 학년 " . ($j + 1) . " 반";
                 foreach ($class as $key => $yoil) {
+
                     if ($key != "teacher") {
+                        echo "<div>";
                         echo "<br><p>{$key}요일</p>";
                         foreach ($yoil as $k => $e) {
                             echo ($k + 1) . "교시: ";
@@ -19,10 +22,12 @@
                             }
                             echo $e['class'] . "<br>";
                         }
+                        echo "</div>";
                     } else {
                         echo " (담임: $yoil)</h1>";
                     }
                 }
+                echo "</div>";
             }
         }
         ?>
