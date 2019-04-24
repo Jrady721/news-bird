@@ -1,4 +1,7 @@
 /vendor/
 .env
+.env.local
+.env.production
 .idea
-/public/files/
+/public/files
+/_others
