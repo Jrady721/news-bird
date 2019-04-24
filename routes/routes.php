@@ -51,17 +51,21 @@ $router->post('/login', function ($request) {
     $user = $stmt->fetch();
     $stmt = null;
 
-    // 암호화
-    $password = base64_encode(hash('sha256', $password, true));
+    if ($user) {
+        // 암호화
+        $password = base64_encode(hash('sha256', $password, true));
 
-    if ($password === $user->password) {
-        alert('로그인을 성공하셨습니다.');
-        $_SESSION['id'] = $user->id;
-        move('/');
+        if ($password === $user->password) {
+            alert('로그인을 성공하셨습니다.');
+            $_SESSION['id'] = $user->id;
+            move('/');
 //        return json_encode($user, JSON_PRETTY_PRINT + JSON_UNESCAPED_UNICODE);
+        } else {
+            alert('로그인을 실패하였습니다.');
+//        return json_encode(array('message' => '실패'), JSON_PRETTY_PRINT + JSON_UNESCAPED_UNICODE);
+        }
     } else {
         alert('로그인을 실패하였습니다.');
-//        return json_encode(array('message' => '실패'), JSON_PRETTY_PRINT + JSON_UNESCAPED_UNICODE);
     }
     back();
 });
