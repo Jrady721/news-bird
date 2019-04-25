@@ -3,7 +3,7 @@
 
 APP URL: https://news-bird.herokuapp.com
 
-현재 DB가 연동되지 않아 일부 기능이 정상작동 안합니다.
+현재 DB가 연동되지 않아 작동되지 않습니다. 2019 내로 연동할 예정입니다.
 
 ### 프로젝트 정보
 ```text
