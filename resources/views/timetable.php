@@ -16,7 +16,7 @@
                             echo "<div class='col'>";
                             echo "<p>{$key}요일</p>";
                             foreach ($yoil as $k => $e) {
-                                echo $e['class'] == "" ? "없음" : "<p class='class'>" . ($k + 1) . ". $e[class]</p>";
+                                echo $e['class'] == "" ? "<p class='class'>없음</p>" : "<p class='class'>" . ($k + 1) . ". $e[class]</p>";
                             }
                             echo "</div>";
                         }
